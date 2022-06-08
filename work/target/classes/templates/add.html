@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>学生成绩管理系统</title>
+</head>
+<link rel="stylesheet" th:href="@{/css/student.css}">
+<body>
+<div class="header">
+    <div style="width:20vw;" class="header-cell">
+        <!--img src="./img/2.jpg" alt=""-->
+    </div>
+    <div style="width:15vw;" class="header-cell header-menu">
+        <p>学生成绩管理系统</p>
+    </div>
+    <!--div style="width:15vw;" class="header-cell header-menu">
+        <p>会员中心</p>
+    </div-->
+    <div style="width:15vw;" class="header-cell header-menu">
+
+    </div>
+    <a th:href="@{/new3}" style="text-decoration:none; width:20vw;background:red;color: white;font-size: 2rem;" class="header-cell">
+        退出
+    </a>
+</div>
+<div class="main">
+    <div class="nav">
+        <ul>
+            <li><a th:href="@{/get}">学生课程表</a></li>
+            <li><a th:href="@{/get1}">学生成绩表</a></li>
+            <li><a th:href="@{/get2}">用户表</a></li>
+        </ul>
+    </div>
+    <form th:action="@{/add}" method="post">
+        <div>
+            <label>编号<input type="text" name="id"></label>
+        </div>
+        <div>
+            <label>班级<input type="text" name="courseName"></label>
+        </div>
+        <div>
+            <label>用户名<input type="text" name="teacherName"></label>
+        </div>
+        <button >添加</button>
+    </form>
+
+</div>
+</body>
+</html>
